@@ -3,3 +3,5 @@
 **/**/models
 model
 **/**/yolov3.pt
+tasks/vision/action_recognition/driver-action-recognition.mp*
+tasks/text/speech_segmentation/ggml-tiny.bin
