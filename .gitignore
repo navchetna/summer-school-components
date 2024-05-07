@@ -2,3 +2,4 @@
 **/**/my_model*
 **/**/models
 model
+**/**/yolov3.pt
