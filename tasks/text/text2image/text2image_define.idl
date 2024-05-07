@@ -1,0 +1,6 @@
+component Text2Image{
+    service generate{
+        [in] string prompt;
+        [out] int error_code;
+    };
+};

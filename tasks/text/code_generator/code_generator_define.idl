@@ -1,0 +1,14 @@
+component CodeAutocomplete{
+    service autocomplete{
+        /**
+        * Generates code completions for given prompts.
+        *
+        * @param input_code code snippets that require completion.
+        * @param completed_code The code completion for the input_codes
+        */
+
+        [in] string input_code;
+        [out] string completed_code;
+        [out] int error_code;
+    };
+};

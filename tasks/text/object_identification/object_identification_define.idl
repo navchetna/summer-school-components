@@ -1,0 +1,7 @@
+component object_detection{
+    service detect_objects{
+        [in] string img_path;
+        [in] string output_img_path;
+        [out] int error code;
+    }
+}

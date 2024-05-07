@@ -1,0 +1,7 @@
+component handle_camera{
+    service stream{
+        [in] Live camera input;
+        [out] Live Streaming
+        [out] int error_code;
+    }
+}

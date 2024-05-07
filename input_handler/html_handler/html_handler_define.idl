@@ -1,0 +1,14 @@
+component html_handler{
+    service get_paragraphs{
+        /**
+            * Extracts paragraphs from webpages.
+            * 
+            * @param url_list   List of URLs from which data (paragraphs) needs to extracted.
+            * @param all_paragraphs  List of strings containing the extracted data from URLs.
+            */
+
+            [in] List[string] url_list;
+            [out] List[string] all_paragraphs;
+            [out] int error_code;
+    };
+};

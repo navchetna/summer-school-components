@@ -1,0 +1,16 @@
+component TapexQuery{
+    service query_table{
+        /**
+        * Querying information from a table
+        *
+        * @param table The tabular data to be queried.
+        * @param analyze_results The question you want to ask about the data in the table.
+        * @param result The answer to the query from the table.
+        */
+
+        [in] DataFrame table;
+        [in] string query;
+        [out] string result;
+        [out] int error_code;
+    };
+};

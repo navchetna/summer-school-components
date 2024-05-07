@@ -1,0 +1,17 @@
+component TranslationService{
+    service translate{
+        /**
+        * translates text from one language to another.
+        *
+        * @param text The text you want to translate.
+        * @param src_lang The source language code (e.g., "en" for English).
+        * @param target_lang The target language code (e.g., "fr" for French).
+        */
+
+        [in] string text;
+        [in] string src_lang;
+        [in] string target_lang;
+        [out] string translated_text;
+        [out] int error_code;
+    };
+};

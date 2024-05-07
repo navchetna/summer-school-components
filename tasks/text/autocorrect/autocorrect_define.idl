@@ -1,0 +1,26 @@
+component AutoCorrect{
+    service check_grammar{
+        /**
+        * Gives a score depending on the grammatical errors in the provided sentence
+        *
+        * @param input_text The text for which grammatical errors need to checked for.
+        */
+
+        [in] string input_text;
+        [out] float score;
+        [out] int error_code;
+    };
+    service correct_grammar{
+        /**
+        * Corrects grammatical errors in the input text
+        *
+        * @param input_text The text for which grammatical errors need to checked for 
+        * @param max_suggestions The number of different corrected text options you want the model to generate.
+        */
+
+        [in] string input_text;
+        [in] int max_suggestions;
+        [out] List[string] suggestions;
+        [out] int error_code;
+    };
+};

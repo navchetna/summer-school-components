@@ -1,0 +1,7 @@
+component synonym_generator{
+    service find_synonyms{
+        [in] string word;
+        [out] List synonyms;
+        [out] int error_code;
+    }
+}

@@ -1,0 +1,19 @@
+component pdfreader{
+    service read_pdf{
+        /**
+        * Parses Pdfs to extract information from it. 
+        * 
+        * @param document_location This is a string representing the path to the document that needs to be parsed.
+        * @param return_obj A tuple containing page_content of the loaded document, document_name String representing the source name of the loaded documents,document_type string indicating the file extension of the loaded documents.
+        */
+
+        [in] string document_location;
+        [out] List[chunk] return_obj;
+        [out] int error_code;
+    }; 
+    struct chunk{
+        string content;
+        string document_type;
+        string document_source;
+    };
+};

@@ -1,0 +1,7 @@
+component PDFHighlighter{
+    service highlight_text{
+        [in] string text_to_highlight;
+        [out] string output_path;
+        [out] int error code;
+    }
+}

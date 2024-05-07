@@ -1,0 +1,16 @@
+component VectorDB{
+    service query_embeddings{
+        /**
+        * Searches the database for text chunks similar to a given query embedding.
+        *
+        * @param query_embedding The numerical embedding representing the query text.
+        * @param limit The max number of similar chunks to return.
+        * @param retrieved_chunks The list containing the most similar chunks.
+        */
+
+        [in] List[int] query_embedding;
+        [in] int limit;
+        [out] List[string] retrieved_chunks;
+        [out] int error_code;
+    };
+};

@@ -1,0 +1,6 @@
+component Text2speech{
+    service generate_audio{
+        [in] string prompt;
+        [out] int error_code;
+    };
+};

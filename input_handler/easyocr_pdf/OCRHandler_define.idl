@@ -1,0 +1,16 @@
+component OCRHandler{
+    service read_text_from_image{
+        /**
+        * Reads text from an image file.
+        * 
+        * @param image_path The path to the image file to be processed.
+        * @param detail The level of detail for text extraction (0 for basic, 1 for detailed).
+        * @param result The extracted text from the image.
+        */
+
+        [in] string  image_path;
+        [in] int detail;
+        [out] string result;  
+        [out] int error_code;
+    };
+};

@@ -1,0 +1,15 @@
+component QuestionAnswering{
+    service answer_question{
+        /**
+        * Answers a question based on the provided context
+        *
+        * @param question Question to be answer.
+        * @param context The context related to the question.
+        */
+
+        [in] string question;
+        [in] string context;
+        [out] string answer;
+        [out] int error_code;
+    };
+};

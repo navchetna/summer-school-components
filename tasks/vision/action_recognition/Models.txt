@@ -1,0 +1,9 @@
+architecture_type = en-de
+    action-recognition-0001-decoder
+    action-recognition-0001-encoder
+    driver-action-recognition-adas-0002-decoder
+    driver-action-recognition-adas-0002-encoder
+architecture_type = en-mean
+    weld-porosity-detection-0001
+architecture_type = i3d-rgb
+    i3d-rgb-tf

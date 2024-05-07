@@ -1,0 +1,7 @@
+component notes_generator{
+    service generate_points{
+        [in] String Summary;
+        [out] string important_points;
+        [out] int error_code;
+    }
+}

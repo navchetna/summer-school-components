@@ -1,0 +1,15 @@
+component Summarizer{
+    service summary_generator{
+        /**
+        * Generates summary for the given input_text
+        *
+        * @param input series of strings for which summary needs to be generated
+        * @param summary returns the summary generated 
+        */
+
+        [in] string input;
+        [in] int max_summary_length;
+        [out] string summary;
+        [out] int error_code;
+    };
+};

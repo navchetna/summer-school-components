@@ -1,0 +1,18 @@
+component YouTubeTranscriptExtractor{
+    service fetch_transcript{
+        /**
+        * Extracts the transcript from the youtube video given the youtube_id.
+        *
+        * @param youtube_id The youtube_id of the video.
+        */
+
+        [in] string youtube_id;
+        [out] List[Dict] transcript;
+        [out] int error_code;
+    };    
+    struct Dict{
+        string transcribed_text;
+        int start;
+        int duration;
+    };
+};

@@ -1,0 +1,14 @@
+component detect_language{
+    service language_identifier{
+        /**
+        * Detects language of the input_text
+        *
+        * @param input_text The text for which language must be identified.
+        * @param detected_language The language detected from the given input.
+        */
+
+        [in] string input_text;
+        [out] string detected_language;
+        [out] int error_code;
+    }
+}

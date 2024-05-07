@@ -1,0 +1,14 @@
+component ImageTextExtractor{
+    service extract_text{
+        /**
+        * Extracts text from the image
+        * 
+        * @param image_path string containing the path to the image.
+        * @param text the content of the input image.
+        */
+
+        [in] string image_path;
+        [out] string text;
+        [out] int error_code;
+    };
+};

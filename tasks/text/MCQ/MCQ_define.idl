@@ -1,0 +1,7 @@
+component MCQ{
+    service generate_mcqs{
+        [in] string summary;
+        [out] List mcqs;
+        [out] int error code;
+    }
+}

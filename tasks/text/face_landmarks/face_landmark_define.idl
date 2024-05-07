@@ -1,0 +1,6 @@
+component face_landmark{
+    service detect_landmark{
+        [in] string image_path;
+        [out] int error_code;
+    }
+}

@@ -1,0 +1,7 @@
+component audio_denoise{
+    service remove_noise{
+        [in] string file_path;
+        [out] audio_file output.wav;
+        [out] int error_code;
+    }
+}

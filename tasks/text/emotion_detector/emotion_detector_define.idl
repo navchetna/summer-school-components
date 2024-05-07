@@ -1,0 +1,7 @@
+component emotion_detector{
+    service detect_emotion{
+        [in] string img_path;
+        [out] string detected_emotion;
+        [out] int error_code;
+    };
+};

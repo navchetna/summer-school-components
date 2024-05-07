@@ -1,0 +1,7 @@
+component pose_estimation{
+    serive poseDetector{
+        [in] string image_path;
+        [out] List[List] image;
+        [out] int error_code;
+    }
+}

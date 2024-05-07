@@ -1,0 +1,13 @@
+component image_embedder{
+    service embed_image{
+        [in] string image_path;
+        [out] List embedding_vector;
+        [out] int error code;
+    }
+    
+    service calculate_similarity{
+        [in] List first_image_embedding;
+        [in] List second_image_embedding;
+        [out] int similarity_score;
+    }
+}

@@ -1,0 +1,7 @@
+component speech2text{
+    service convert_audio_to_text{
+        [in] string audio_file_path;
+        [out] string text;
+        [out] int error_code;
+    }
+}

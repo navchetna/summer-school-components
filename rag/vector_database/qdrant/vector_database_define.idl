@@ -1,0 +1,14 @@
+component VectorDB{
+    service insert_docs_embeddings{
+        /**
+        * Inserts embeddings and associated text chunks into the database.
+        *
+        * @param embeddings A list of numerical embeddings representing text chunks.
+        * @param metadata A dictionary containing additional metadata to be associated with the embeddings.
+        */
+
+        [in] List embeddings;
+        [in] dict metadata;
+        [out] int error_code;
+    };
+};

@@ -1,0 +1,2 @@
+langdetect == 1.0.9
+pycountry == 23.12.11

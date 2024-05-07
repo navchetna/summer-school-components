@@ -1,0 +1,14 @@
+component SQLTranslator{
+    service translate_query{
+        /**
+        * Translation of English language queries into SQL
+        *
+        * @param query The English query to be translated.
+        * @param result Generated SQL string
+        */
+
+        [in] string query;
+        [out] string result;
+        [out] int error_code;
+    };
+};

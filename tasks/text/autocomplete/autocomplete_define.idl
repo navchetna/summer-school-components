@@ -1,0 +1,19 @@
+component text_autocomplete{
+    service get_prediction{
+        /**
+        * Generates autocomplete suggestions for the input text.
+        *
+        * @param input_text The text for which suggestions need to generated.
+        * @param top_k the maximum number of suggestions with the highest probability
+        */
+
+        [in] string input_text;
+        [in] int top_k;
+        [out] dict[pred_output] res;
+        [out] int error_code;
+
+    }
+    struct pred_output{
+        string Predictions;
+    }
+}
