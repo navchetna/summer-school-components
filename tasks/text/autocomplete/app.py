@@ -120,8 +120,6 @@ with functionality_expander:
                answer.append(i)
             st.write(user_input + " " + answer[0])
             st.write(user_input + " " + answer[1])
-            st.write(user_input + " " + answer[2])
-
 
             # new_input = st.text_input("input word: ")
         else:

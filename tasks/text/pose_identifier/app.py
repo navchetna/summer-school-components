@@ -13,7 +13,9 @@ class SessionState:
 # Set the page to wide layout
 st.set_page_config(layout="wide")
 
-# Initialize the profanity masker
+# Styling
+with open('styles.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 
 # Streamlit app

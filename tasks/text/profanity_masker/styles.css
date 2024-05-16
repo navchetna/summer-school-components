@@ -1,0 +1,99 @@
+.stApp {
+  /* background: linear-gradient(-36deg, #2155bf 6%, rgba(0, 212, 255, 1) 91%); */
+  background: linear-gradient(
+    -36deg,
+    rgb(127, 127, 127) 6%,
+    rgba(255, 255, 255, 1) 70%
+  );
+}
+
+body {
+  /* background-image: url("https://c8.alamy.com/comp/P5D80D/abstract-background-with-technology-circuit-board-texture-futuristic-digital-circle-communication-and-engineering-concept-innovation-technology-concept-design-wave-flow-vector-illustration-P5D80D.jpg") !important; */
+  background-image: url("https://img.freepik.com/free-vector/white-technology-wallpaper-theme_23-2148416480.jpg?w=996&t=st=1715761512~exp=1715762112~hmac=7caee4158f67a8084f29e80f692ca7d7f07ac753e22ee122a8bd4ec81d23906e") !important;
+  /* -webkit-transform: scaleX(-1);
+  transform: scaleX(-1); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* filter: blur(8px);
+  -webkit-filter: blur(8px); */
+}
+
+details {
+  background-color: #4c4c4c;
+  color: white;
+  border-radius: 0.5rem;
+  transition: all 0.25s ease-in-out;
+}
+/* details:hover {
+  background-color: #6c6c6c !important;
+  color: white !important;
+  border-radius: 0.5rem;
+} */
+label {
+  color: white !important;
+}
+label + div {
+  background-color: white !important;
+  border-radius: 0.2rem !important;
+  color: #4c4c4c;
+}
+button {
+  background-color: #8a8a8a !important;
+  color: white !important;
+  font-size: 1rem !important;
+  border-radius: 0.2rem !important;
+}
+p {
+  font-weight: bold !important;
+  letter-spacing: 0.01rem;
+}
+.step-down,
+.step-up {
+  border-radius: 0rem !important;
+}
+
+th,
+thead,
+.row_heading {
+  font-weight: bold;
+  border: 0.2rem solid rgb(127, 127, 127);
+  color: #4c4c4c;
+  /* background-color: rgb(255, 255, 255); */
+}
+td {
+  font-weight: bold;
+  border: 0.2rem solid rgb(127, 127, 127) !important;
+  color: #4c4c4c;
+  /* background-color: rgb(255, 255, 255); */
+}
+tr {
+  font-weight: bold;
+  color: #4c4c4c;
+  /* background-color: rgb(231, 231, 231); */
+}
+thead {
+  display: none;
+}
+pre {
+  background-color: #4c4c4c;
+  transition: all 0.25s ease-in-out;
+  color: rgb(255, 255, 255) !important;
+}
+/* pre:hover {
+  background-image: url("/bg.jpg") repeat 0 0;
+  background-color: #6c6c6c !important;
+  color: rgb(255, 255, 255) !important;
+  border-radius: 0.5rem;
+} */
+p {
+  font-weight: bold;
+}
+
+header {
+  background-color: transparent !important;
+}
+
+a + span {
+  color: #4c4c4c;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}

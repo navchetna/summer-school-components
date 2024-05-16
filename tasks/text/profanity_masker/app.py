@@ -10,8 +10,11 @@ class SessionState:
 # Set the page to wide layout
 st.set_page_config(layout="wide")
 
-# Initialize the profanity masker
+# Initialize the profanity masker   
 masker = profanity_masker()
+
+with open('styles.css') as f:
+    st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Streamlit app
 st.title("🙊 Profanity Masking")
@@ -38,10 +41,12 @@ component profanity_masker{
 """
 
 # Display the table with all details in the first row
-st.table(description_table)
 
-st.write("Interface Definition Language (IDL)")
+st.table(description_table)
+     
+st.write("Component Definition Language (CDL)")
 # Print the message with the same indentation and format
+
 st.code(message, language='plaintext')
 
 st.table(description_table2)
