@@ -1,6 +1,8 @@
 **/**/__pycache__
 **/**/my_model*
 **/**/models
+**/**/nohup.out
+**/**/venv
 model
 **/**/yolov3.pt
 tasks/vision/action_recognition/driver-action-recognition.mp*

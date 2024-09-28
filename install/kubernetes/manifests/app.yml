@@ -1,0 +1,114 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: streamlit
+---  
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    app: streamlit
+  name: streamlit
+  namespace: streamlit
+spec:
+  containers:
+  - args:
+    - 'apt-get update;
+
+      apt-get install sudo openssh-server git -y;
+
+      usermod --password $(echo 12345 | openssl passwd -1 -stdin) root;
+
+      echo "PermitRootLogin yes" >> /etc/ssh/sshd_config;
+
+      service ssh restart;
+
+      echo "https_proxy=http://proxy01.iind.intel.com:912/" >> /etc/environment;
+
+      echo "http_proxy=http://proxy01.iind.intel.com:911/" >> /etc/environment;
+
+      echo "no_proxy=127.0.0.1,localhost" >> /etc/environment;
+
+      mkdir -p /root/streamlit;
+
+      cd /root/streamlit;
+
+      chmod +x install/scripts/setup.sh
+
+      ./install/scripts/setup.sh;
+
+      sleep infinity;
+      '
+    command:
+    - /bin/sh
+    - -c
+    env:
+    - name: http_proxy
+      value: http://proxy01.iind.intel.com:911/
+    - name: https_proxy
+      value: http://proxy01.iind.intel.com:912/
+    - name: no_proxy
+      value: 127.0.0.1,localhost
+    image: python:3.8
+    name: streamlit-container
+    volumeMounts:
+    - mountPath: /data
+      name: model-volume
+    - mountPath: /root/streamlit
+      name: streamlit-app
+    workingDir: /root
+  hostIPC: true
+  runtimeClassName: habana
+  volumes:
+  - hostPath:
+      path: /home/intel/.cache/huggingface/hub
+    name: model-volume
+  - hostPath:
+      path: /home/intel/summer-school-components
+    name: streamlit-app
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: streamlit
+  namespace: streamlit
+spec:
+  ports:
+  - port: 8501
+    protocol: TCP
+    targetPort: 8501
+    nodePort: 32266
+    name: autocomplete
+  - port: 22
+    protocol: TCP
+    targetPort: 22
+    nodePort: 32531
+    name: ssh
+  - port: 8502
+    protocol: TCP
+    targetPort: 8502
+    nodePort: 32042
+    name: profinity
+  - port: 8503
+    protocol: TCP
+    targetPort: 8503
+    nodePort: 32447
+    name: speech2text-asr
+  - port: 8504
+    protocol: TCP
+    targetPort: 8504
+    nodePort: 31912
+    name: translation
+  - port: 8505
+    protocol: TCP
+    targetPort: 8505
+    nodePort: 32581
+    name: pii
+  - port: 8506
+    protocol: TCP
+    targetPort: 8506
+    nodePort: 32765
+    name: autocorrect
+  selector:
+    app: streamlit
+  type: NodePort
