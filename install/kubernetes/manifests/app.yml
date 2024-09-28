@@ -62,7 +62,7 @@ spec:
       path: /home/intel/.cache/huggingface/hub
     name: model-volume
   - hostPath:
-      path: /home/intel/kubernetes_files/thebeginner86/summer-school-components
+      path: /home/intel/summer-school-components
     name: streamlit-app
 ---
 apiVersion: v1
